@@ -18,6 +18,13 @@ Python based command-line game against COMP.
 2. Get into the repo
    ```bash
    cd Rock-Paper-Scissors-CLI
-4. Run the game throught python
+3. Give the file executable permissions
+   ```bash
+   chmod +x "CLI rps.py"  
+5. Run the game throught python
    ```bash
    python CLI\ rps.py
+   ```
+   OR just do
+   ```bash
+   ./"CLI rps.py"
