@@ -21,10 +21,6 @@ Python based command-line game against COMP.
 3. Give the file executable permissions
    ```bash
    chmod +x "CLI rps.py"  
-5. Run the game throught python
-   ```bash
-   python CLI\ rps.py
-   ```
-   OR just do
+5. Run the game 
    ```bash
    ./"CLI rps.py"
