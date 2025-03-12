@@ -1,5 +1,69 @@
-#!/usr/bin/env python3
 import random
+import time
+
+def mode_three():
+    mode = 3
+    while mode > 0:
+        comp_win = 0
+        player_win = 0
+
+        choice = int(input("Press 1 for choosing rock , 2 for scissor , 3 for paper : "))
+        print("Player's choice :")
+        if choice == 1:
+            print(rock)
+        if choice == 2:
+            print(scissors)
+        if choice == 3:
+            print(paper)
+
+        print(f"Computer's choice :")
+
+        list1 = [rock, scissors, paper]
+        num = random.randint(0, 2)
+        CompChoice = list1[num]
+        print(CompChoice)
+
+        # rock section
+        if CompChoice == rock and choice == 1:
+            print("Its a draw---------------------")
+            print("Score stays the same")
+        if CompChoice == rock and choice == 2:
+            print("Computer WINS------------------")
+            comp_win += 1
+            print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
+        if CompChoice == rock and choice == 3:
+            print("You WIN------------------------")
+            player_win += 1
+            print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
+
+        # scissors section
+        if CompChoice == scissors and choice == 1:
+            print("You WIN------------------------")
+            player_win +=1
+            print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
+        elif CompChoice == scissors and choice == 2:
+            print("Its a draw---------------------")
+        elif CompChoice == scissors and choice == 3:
+            print("Computer WINS------------------")
+            comp_win += 1
+            print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
+
+
+        # paper section
+        if CompChoice == paper and choice == 1:
+            print("Computer WINS------------------")
+            comp_win += 1
+            print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
+        elif CompChoice == paper and choice == 2:
+            print("You WIN------------------------")
+            player_win += 1
+            print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
+        elif CompChoice == paper and choice == 3:
+            print("Its a draw---------------------")
+            print("Score stays the same")
+
+        mode = mode -1
+        print(f"The end score after 3 rounds is : {comp_win}  /  {player_win}")
 rock = '''
     _______
 ---'   ____)
@@ -42,54 +106,16 @@ print(r"""                _
 
 print(" --------------------------------------------- ")
 
-choice = int(input("Press 1 for choosing rock , 2 for scissor , 3 for paper : "))
-print("Player's choice :")
-if choice == 1:
-    print(rock)
-if choice == 2:
-    print(scissors)
-if choice == 3:
-    print(paper)
+print(r"""#        _                                                                             _      
+#    ___| |__   ___   ___  ___  ___    __ _  __ _ _ __ ___   ___   _ __ ___   ___   __| | ___ 
+#   / __| '_ \ / _ \ / _ \/ __|/ _ \  / _` |/ _` | '_ ` _ \ / _ \ | '_ ` _ \ / _ \ / _` |/ _ \
+#  | (__| | | | (_) | (_) \__ \  __/ | (_| | (_| | | | | | |  __/ | | | | | | (_) | (_| |  __/
+#   \___|_| |_|\___/ \___/|___/\___|  \__, |\__,_|_| |_| |_|\___| |_| |_| |_|\___/ \__,_|\___|
+#                                     |___/                                                   """)
 
-print(f"Computer's choice :")
+game_mode = str(input("------ Best of three or best of five (three/five): "))
 
-list1 = [rock, scissors, paper]
-num = random.randint(0,2)
-CompChoice = list1[num]
-
-
-if CompChoice == rock and choice == 1:
-    print(CompChoice)
-    print("Its a draw---------------------")
-if CompChoice == rock and choice == 2:
-    print(CompChoice)
-    print("Computer WINS------------------")
-if CompChoice == rock and choice == 3:
-    print(CompChoice)
-    print("You WIN------------------------")
-
-if CompChoice == scissors and choice == 1:
-    print(CompChoice)
-    print("You WIN------------------------")
-if CompChoice == scissors and choice == 2:
-    print(CompChoice)
-    print("Its a draw---------------------")
-if CompChoice == scissors and choice == 3:
-    print(CompChoice)
-    print("Computer WINS------------------")
-
-if CompChoice == paper and choice == 1:
-    print(CompChoice)
-    print("Computer WINS------------------")
-if CompChoice == paper and choice == 2:
-    print(CompChoice)
-    print("You WIN------------------------")
-if CompChoice == paper and choice == 3:
-    print(CompChoice)
-    print("Its a draw---------------------")
-
-
-
-
-
-
+if game_mode == "three":
+    mode_three()
+elif game_mode == "five":
+    mode_five()
