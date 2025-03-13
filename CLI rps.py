@@ -11,10 +11,14 @@ def mode_three():
         print("Player's choice :")
         if choice == 1:
             print(rock)
-        if choice == 2:
+        elif choice == 2:
             print(scissors)
-        if choice == 3:
+        elif choice == 3:
             print(paper)
+        else:
+            print(f"Invalid input , try entering values b/w 1-3")
+
+
 
         print(f"Computer's choice :")
 
@@ -27,11 +31,11 @@ def mode_three():
         if CompChoice == rock and choice == 1:
             print("Its a draw---------------------")
             print("Score stays the same")
-        if CompChoice == rock and choice == 2:
+        elif CompChoice == rock and choice == 2:
             print("Computer WINS------------------")
             comp_win += 1
             print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
-        if CompChoice == rock and choice == 3:
+        elif CompChoice == rock and choice == 3:
             print("You WIN------------------------")
             player_win += 1
             print(f"Comp wins : {comp_win} ---------  Your wins : {player_win}")
@@ -63,7 +67,9 @@ def mode_three():
             print("Score stays the same")
 
         mode = mode -1
-        print(f"The end score after 3 rounds is : {comp_win}  /  {player_win}")
+
+
+print(f"The end score after 3 rounds is : {comp_win}  /  {player_win}")
 rock = '''
     _______
 ---'   ____)
@@ -117,5 +123,7 @@ game_mode = str(input("------ Best of three or best of five (three/five): "))
 
 if game_mode == "three":
     mode_three()
+    print(f"The end score after 3 rounds is : {comp_win}  /  {player_win}")
 elif game_mode == "five":
     mode_five()
+    print(f"The end score after 5 rounds is : {comp_win}  /  {player_win}")
