@@ -1,11 +1,14 @@
 import random
 import time
 
+
+comp_win = 0
+player_win = 0
 def mode_three():
     mode = 3
     while mode > 0:
-        comp_win = 0
-        player_win = 0
+        global comp_win
+        global player_win
 
         choice = int(input("Press 1 for choosing rock , 2 for scissor , 3 for paper : "))
         print("Player's choice :")
@@ -69,7 +72,8 @@ def mode_three():
         mode = mode -1
 
 
-print(f"The end score after 3 rounds is : {comp_win}  /  {player_win}")
+
+
 rock = '''
     _______
 ---'   ____)
