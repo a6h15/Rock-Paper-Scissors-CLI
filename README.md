@@ -3,7 +3,7 @@
 A simple and basic CLI rock paper scissors game(just figuring some stuff out with git)
 
 ## Description
-Python based command-line game against COMP. 
+Python based command-line game against COMPUTER.
 
 ## How to Play
 1. Choose Rock, Paper, or Scissors by entering the corresponding number:
